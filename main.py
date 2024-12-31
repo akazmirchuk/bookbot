@@ -35,7 +35,8 @@ def report(word, char):
     print(f"{word} words found in the document\n\n")
     
     for ch,cnt in char.items():
-        print(f"The {ch} character was found {cnt} times")
+        if ch.isalpha():
+            print(f"The {ch} character was found {cnt} times")
     
     print("--- End report ---")
     
