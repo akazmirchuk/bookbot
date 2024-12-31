@@ -7,7 +7,8 @@ def main():
     print(f"Word Count: {count_words(file_contents)}")
 
 def count_words(text):
-    words = text.split()
+    words = len(text.split())
+    
     return words
 
 main()
