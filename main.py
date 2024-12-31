@@ -15,16 +15,16 @@ def count_words(text):
 def count_uchars(text):
     chars = list(text)
         
-    return chars
+    dict_chars = {}
+
+    for c in chars:
+        if c not in dict_chars:
+            dict_chars["character"] = c
+            dict_chars["count"] = 1
+        else:
+            dict_chars[c] += 1
     
-    #print(chars)
-    #uncounted_chars = words.split()
-
-
-    #chars = {}
-
-
-
-
+    return dict_chars
+    
 main()
 
