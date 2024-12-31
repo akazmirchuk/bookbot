@@ -21,16 +21,15 @@ def count_uchars(text):
             dict_chars[c] = 1
         else:
             dict_chars[c] += 1
-    
 
-    def sort_on(dict):
-        return dict["num"]
-    
-    list_chars = list(dict_chars)
-    
-    list_chars.sort(reverse=True, key=sort_on)
 
-    return dict_chars
+    list_chars = list(dict_chars.items())
+        
+    list_chars.sort(reverse=True, key=lambda item: item[1])
+
+    sorted_dict = dict(list_chars)
+
+    return sorted_dict
 
 def report(word, char):
 
