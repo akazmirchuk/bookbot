@@ -26,7 +26,9 @@ def count_uchars(text):
     def sort_on(dict):
         return dict["num"]
     
-    dict_chars.sort(reverse=True, key=sort_on)
+    list_chars = list(dict_chars)
+    
+    list_chars.sort(reverse=True, key=sort_on)
 
     return dict_chars
 
