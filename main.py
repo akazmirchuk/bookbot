@@ -3,9 +3,12 @@ def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
 
-    print(file_contents)
-    print(f"Word Count: {count_words(file_contents)}")
-    print(count_uchars(file_contents))
+    file_text = file_contents
+    word_count = count_words(file_contents)
+    char_count = count_uchars(file_contents)
+    report(word_count,char_count)
+    #print(f"Word Count: {count_words(file_contents)}")
+    #print(count_uchars(file_contents))
 
 def count_words(text):
     words = len(text.split())
@@ -26,6 +29,15 @@ def count_uchars(text):
             dict_chars[c] += 1
     
     return dict_chars
+
+def report(word, char):
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{word} words found in the document\n\n")
+    
+    for ch,cnt in char.items():
+        print(f"The {char[ch]} character was found {char[cnt]} times")
+    
+    print("--- End report ---")
     
 main()
 
