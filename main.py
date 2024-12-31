@@ -35,7 +35,7 @@ def report(word, char):
     print(f"{word} words found in the document\n\n")
     
     for ch,cnt in char.items():
-        print(f"The {char[ch]} character was found {char[cnt]} times")
+        print(f"The {ch} character was found {cnt} times")
     
     print("--- End report ---")
     
