@@ -13,14 +13,15 @@ def count_words(text):
     return words
 
 def count_uchars(text):
-    words = (text.lower()).split()
-    #words = words.split()
+    chars = list(text)
+        
+    return chars
     
-    print(words)
-    uncounted_chars = words.split()
+    #print(chars)
+    #uncounted_chars = words.split()
 
 
-    chars = {}
+    #chars = {}
 
 
 
