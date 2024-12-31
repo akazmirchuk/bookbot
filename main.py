@@ -13,14 +13,15 @@ def count_words(text):
     return words
 
 def count_uchars(text):
-    chars = list(text)
+    
+    formatted_text = text.lower()
+    #chars = list(text)
         
     dict_chars = {}
 
-    for c in chars:
+    for c in formatted_text:
         if c not in dict_chars:
-            dict_chars["character"] = c
-            dict_chars["count"] = 1
+            dict_chars[c] = 1
         else:
             dict_chars[c] += 1
     
